@@ -189,7 +189,7 @@
          <a-assets>
           <a-asset-item
             id="bowser"
-            src="assets/asset.gltf"
+            src="assets/tecnopaugil.gltf"
           >
           
           </a-asset-item>
@@ -209,7 +209,7 @@
             id="bowser-model"
             position="0 0 0"
             rotation="-90 0 0"
-            scale="0.03 0.03 0.03"
+            scale="1 1 1"
             gltf-model="#bowser"
             class="clickable"
             animation-mixer="loop: repeat"
@@ -224,39 +224,39 @@
         <a-entity camera></a-entity>
         </a-scene>
         <script>
-          var myAudio = document.getElementById('my-audio');
-          AFRAME.registerComponent('markerhandler', {
-            init: function () {
-              this.el.sceneEl.addEventListener('markerFound', () => {
-                // redirect to custom URL e.g. google.com
-                // window.location = 'https://www.google.com/';
-                tagOn()
-              })
-              this.el.sceneEl.addEventListener('markerLost', () => {
-                // redirect to custom URL e.g. google.com
-                // window.location = 'https://www.google.com/';
-                tagOff()
-              })
-            }
-          });
+          // var myAudio = document.getElementById('my-audio');
+          // AFRAME.registerComponent('markerhandler', {
+          //   init: function () {
+          //     this.el.sceneEl.addEventListener('markerFound', () => {
+          //       // redirect to custom URL e.g. google.com
+          //       // window.location = 'https://www.google.com/';
+          //       tagOn()
+          //     })
+          //     this.el.sceneEl.addEventListener('markerLost', () => {
+          //       // redirect to custom URL e.g. google.com
+          //       // window.location = 'https://www.google.com/';
+          //       tagOff()
+          //     })
+          //   }
+          // });
 
-          function on() {
-            document.getElementById("overlay").style.display = "block";
-          }
+          // function on() {
+          //   document.getElementById("overlay").style.display = "block";
+          // }
           
-          function off() {
-            document.getElementById("overlay").style.display = "none";
-          }
+          // function off() {
+          //   document.getElementById("overlay").style.display = "none";
+          // }
 
-          function tagOn() {
-            document.getElementById("tagFound").style.display = "block";
-            document.getElementById('my-audio').play();
-          }
+          // function tagOn() {
+          //   document.getElementById("tagFound").style.display = "block";
+          //   document.getElementById('my-audio').play();
+          // }
           
-          function tagOff() {
-            document.getElementById("tagFound").style.display = "none";
-            document.getElementById('my-audio').pause();
-          }
+          // function tagOff() {
+          //   document.getElementById("tagFound").style.display = "none";
+          //   document.getElementById('my-audio').pause();
+          // }
           </script>
 
     </body>
